@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomealuno: MyString
+  nomepai: MyString
+  telpai: MyString
+  nomemae: MyString
+  telmae: MyString
+  telefone3: MyString
+
+two:
+  nomealuno: MyString
+  nomepai: MyString
+  telpai: MyString
+  nomemae: MyString
+  telmae: MyString
+  telefone3: MyString

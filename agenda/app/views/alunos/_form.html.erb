@@ -1,0 +1,50 @@
+<%= form_for(@aluno) do |f| %>
+  <% if @aluno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aluno.errors.count, "error") %> prohibited this aluno from being saved:</h2>
+
+      <ul>
+      <% @aluno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="control-group">
+    <%= f.label "Nome do Aluno", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nomealuno, :class => 'form-control' %>
+    </div><br>
+    <%= f.label "Nome do pai", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nomepai, :class => 'form-control' %>
+    </div><br>
+      <%= f.label "Telefone do pai", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :telpai, :class => 'form-control' %>
+    </div><br>
+      <%= f.label "Nome da mãe", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nomemae, :class => 'form-control' %>
+    </div><br>
+      <%= f.label "Telefone da mãe", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :telmae, :class => 'form-control' %>
+    </div><br>
+      <%= f.label "Telefone 3", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :telefone3, :class => 'form-control' %>
+    </div>
+  </div>
+  <br>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            alunos_path, :class => 'btn btn-default' %>
+
+
+
+<% end %>
